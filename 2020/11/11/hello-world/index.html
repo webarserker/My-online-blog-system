@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>showDoc基本用法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最基本的使用方法可以符合团队敏捷开发web模块，提高开发效率 数据字典，接口模板 团队协作 免费开源 docker Docker容器技术的特点：文件系统隔离：每个进程容器运行在完全独立的根文件系统里。资源隔离：可以使用cgroup为每个进程容器分配不同的系统资源，例如CPU和内网络隔离：每个进程容器运行在自己的网络命名空间里，拥有自己的虚拟接口和写时复制：采用写时复制方式创建根文件系统，这让部署变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="showDoc基本用法">
+<meta property="og:url" content="http://example.com/2020/11/11/hello-world/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最基本的使用方法可以符合团队敏捷开发web模块，提高开发效率 数据字典，接口模板 团队协作 免费开源 docker Docker容器技术的特点：文件系统隔离：每个进程容器运行在完全独立的根文件系统里。资源隔离：可以使用cgroup为每个进程容器分配不同的系统资源，例如CPU和内网络隔离：每个进程容器运行在自己的网络命名空间里，拥有自己的虚拟接口和写时复制：采用写时复制方式创建根文件系统，这让部署变">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-11T08:30:37.160Z">
+<meta property="article:modified_time" content="2020-11-11T08:39:08.962Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/11/hello-world/" class="article-date">
+  <time datetime="2020-11-11T08:30:37.160Z" itemprop="datePublished">2020-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      showDoc基本用法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最基本的使用方法可以符合团队敏捷开发web模块，提高开发效率</p>
+<p>数据字典，接口模板</p>
+<p>团队协作</p>
+<p>免费开源</p>
+<p>docker</p>
+<p>Docker容器技术的特点：文件系统隔离：每个进程容器运行在完全独立的根文件系统里。<br>资源隔离：可以使用cgroup为每个进程容器分配不同的系统资源，<br>例如CPU和内网络隔离：每个进程容器运行在自己的网络命名空间里，拥有自己的虚拟接口和写时复制：<br>采用写时复制方式创建根文件系统，这让部署变得极其快捷，并且节省硬盘空间。<br>日志记录：Docker将会收集和记录每个进程容器的标准流<br>（stdout/stderr/stdin于实时检索或批量检索。变更管理：容器文件系统的变更可以提交到新的映像中，<br>并可重复使用以创建更多器。无需使用模板或手动配置。交互式Shell：Docker可以分配一个虚拟终端并关联到任何容器的标准输入上，<br>例一个一次性交互shell。<br>所以：ABC对，而D，Docker采用的是资源共享型的管理方案，所有的Docker使件资源由docker daemon进行管理与分配。</p>
+<p>先去gtihub：<a target="_blank" rel="noopener" href="https://github.com/docker/docker-install">https://github.com/docker/docker-install</a><br>安装一下    curl -fsSL <a target="_blank" rel="noopener" href="https://get.docker.com/">https://get.docker.com</a> -o get-docker.sh<br>    sh get-docker.sh</p>
+<p>docker聚合命令：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a><br>复制并且运行：<br>官方源拉裤里了：sudo curl -L “<a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$">https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$</a>(uname -s)-$(uname -m)” -o /usr/local/bin/docker-compose<br>这个源下载快curl -L <a target="_blank" rel="noopener" href="https://get.daocloud.io/docker/compose/releases/download/1.25.0/docker-compose-%60uname">https://get.daocloud.io/docker/compose/releases/download/1.25.0/docker-compose-`uname</a> -s<code>-</code>uname -m` &gt; /usr/local/bin/docker-compose</p>
+<p>免除权限：sudo chmod +x /usr/local/bin/docker-compose</p>
+<p>docker：一定要先写 systemctl start docker 启动docker，然后设置systemctl enable docker 开机自启动</p>
+<p>然后安装：docker pull mongo：4 这个版本一般是 <a target="_blank" rel="noopener" href="https://hub.docker.com/_/mongo">https://hub.docker.com/_/mongo</a>  带latest的版本号 但是安装不了</p>
+<p>改成国内的加速源：vim /etc/docker/daemon.json  加上这句话  阿里的最好用<br>{<br>  “registry-mirrors”: [“<a href="https://9cpn8tt6.mirror.aliyuncs.com&quot;]">https://9cpn8tt6.mirror.aliyuncs.com&quot;]</a><br>}</p>
+<p>再执行：<br>systemctl daemon-reload<br>systemctl restart docker<br><a target="_blank" rel="noopener" href="http://www.luxingxing.xyz:10050/">http://www.luxingxing.xyz:10050/</a><br><a target="_blank" rel="noopener" href="http://luxingxing.xyz:10050/">http://luxingxing.xyz:10050/</a></p>
+<p>看看安装了没有<br>docker images</p>
+<p>之后从虚拟机开一个端口映射给mongo：docker run -d –name some-mongo -p 10050:27017 mongo:4</p>
+<p>看看是否运行正常：docker ps 找到some-mongo 就行了</p>
+<p>接下啦要搞定防火墙：<br>方案一：关掉防火墙，放行所有的端口，这样不安全<br>方案二：开发某个端口，这样很安全。采取方案二</p>
+<p>本地好像是不需要弄防火墙就能接受到服务</p>
+<p>执行：firewall-cmd –zone=public –add-port=10050/tcp –permanent<br>success</p>
+<p>查看防火墙的通道端口：firewall-cmd –list-all</p>
+<p>执行：firewall-cmd –reload<br>success</p>
+<p>执行：firewall-cmd –state<br>running</p>
+<p>成功开启通道</p>
+<p>db.createUser({ user:’someMongo’,pwd:’asdasdasd’,roles:[{ role:’userAdminAnyDatabase’, db: ‘admin’}]});</p>
+<p>docker exec -it some-mongo bash</p>
+<p>curl ifconfig.me 查询本机的外网IP</p>
+<p>利用switchhost 添加多个本机IP，对应的 域名，即可同时挂载多个本地服务到外网，但是解析时会有先后顺序，<br>你先http，则解析到此为止，先写https，则会再往下面解析层http</p>
+<p>docker是一台虚拟机对应多个容器，更好<br>传统的虚拟机是，多台虚拟机对应多台容器</p>
+<p>docker 基本命令：</p>
+<p>docker rm 容器名称</p>
+<p>docker不能删除运行中的容器，先docker stop 容器名，后才能删除</p>
+<p>docker 写实复制：既一份副本下载过来能用时用多次，而不去线上拉环境下来</p>
+<p>docker 安装mysql</p>
+<p>docker run -itd –name imooc-mysql -p 3306:3306 -e=MYSQL_ROOT_PASSWORD=123456 mysql</p>
+<p>docker logs -f imooc-mysql: 查看mysql的启动日志</p>
+<p>{<br>“data”: {<br>    “name”:”imooc”,<br>    “pretty”:””<br>    },<br>    “msg”: “hello imooc”,<br>    “code: 200<br>}</p>
+<p>docker run -d –name showdoc_test1 -p 13500:80 -v /showdoc_data/html/:/var/www/html/ star7th/showdoc<br>firewall-cmd –zone=public –add-port=13500/tcp –permanent</p>
+<h6 id="笔记：加入www打不开，不加www打得开，第一首先检查阿里云-域名解析-是否解析到了-www-和-这二种基本上就是设置正确。如果修改本地host为服务器的话，首先检查host是否加了www-开头，没加记得加上并且创建没加的，如此即可解决问题"><a href="#笔记：加入www打不开，不加www打得开，第一首先检查阿里云-域名解析-是否解析到了-www-和-这二种基本上就是设置正确。如果修改本地host为服务器的话，首先检查host是否加了www-开头，没加记得加上并且创建没加的，如此即可解决问题" class="headerlink" title="笔记：加入www打不开，不加www打得开，第一首先检查阿里云 域名解析 是否解析到了 www 和 @ 这二种基本上就是设置正确。如果修改本地host为服务器的话，首先检查host是否加了www. 开头，没加记得加上并且创建没加的，如此即可解决问题"></a>笔记：加入www打不开，不加www打得开，第一首先检查阿里云 域名解析 是否解析到了 www 和 @ 这二种基本上就是设置正确。如果修改本地host为服务器的话，首先检查host是否加了www. 开头，没加记得加上并且创建没加的，如此即可解决问题</h6><p><a target="_blank" rel="noopener" href="http://www.luxingxing.xyz:13500/">http://www.luxingxing.xyz:13500/</a></p>
+<p><a target="_blank" rel="noopener" href="http://luxingxing.xyz:13500/install/index.php">http://luxingxing.xyz:13500/install/index.php</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/11/hello-world/" data-id="ckhd5agp00000pgufcvkvh4rj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/11/hello-world/">showDoc基本用法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
