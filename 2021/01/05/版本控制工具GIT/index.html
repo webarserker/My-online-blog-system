@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>版本控制工具GIT | 攀登之路注定漫长而艰辛</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="常用的git平台： github，gitlab，gitea，gitee就是码云 git基础： 仓库代码操作的基本命令，README.md文件以及开源协议 git flow 分支管理，合并代码 GIT VS SVN 特点： git   不用联网提交代码就能合并，断网解决本地冲突 svn 必须联网才能提交合并，否则无法提交 https VS ssh 特点： https 每次下代码都需要账号+密码 ss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="版本控制工具GIT">
+<meta property="og:url" content="https://webarserker.github.io/2021/01/05/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7GIT/index.html">
+<meta property="og:site_name" content="攀登之路注定漫长而艰辛">
+<meta property="og:description" content="常用的git平台： github，gitlab，gitea，gitee就是码云 git基础： 仓库代码操作的基本命令，README.md文件以及开源协议 git flow 分支管理，合并代码 GIT VS SVN 特点： git   不用联网提交代码就能合并，断网解决本地冲突 svn 必须联网才能提交合并，否则无法提交 https VS ssh 特点： https 每次下代码都需要账号+密码 ss">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-05T08:57:08.124Z">
+<meta property="article:modified_time" content="2021-01-05T09:06:38.907Z">
+<meta property="article:author" content="Shrit">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/shirt/css/images/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/shirt/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/shirt/" id="logo">攀登之路注定漫长而艰辛</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/shirt/">Home</a>
+        
+          <a class="main-nav-link" href="/shirt/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://webarserker.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-版本控制工具GIT" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/shirt/2021/01/05/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7GIT/" class="article-date">
+  <time datetime="2021-01-05T08:57:08.124Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      版本控制工具GIT
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>常用的git平台：</p>
+<p>github，gitlab，gitea，gitee就是码云</p>
+<p>git基础：</p>
+<p>仓库代码操作的基本命令，README.md文件以及开源协议</p>
+<p>git flow</p>
+<p>分支管理，合并代码</p>
+<p>GIT VS SVN</p>
+<p>特点：</p>
+<p>git   不用联网提交代码就能合并，断网解决本地冲突</p>
+<p>svn 必须联网才能提交合并，否则无法提交</p>
+<p>https VS ssh</p>
+<p>特点：</p>
+<p>https 每次下代码都需要账号+密码</p>
+<p>ssh 不需要每次输入，因为电脑以及生成单独密匙，无需输入</p>
+<p>ssh 新建本地密匙时，可以设置二级密码，别人就必须得到你的运行才能访问你的项目</p>
+<h3 id="Git基本操作："><a href="#Git基本操作：" class="headerlink" title="Git基本操作："></a>Git基本操作：</h3><p>git init：初始化并生成快照</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">创建git分支，原理是git会对当前文件夹内容形成一个.git的文件，对每个当前的文件生成快照，以便于比对和提交。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>git add . ：加入新文件 . 代表全部，也可以指定文件名称</p>
+<blockquote>
+<p>执行这句命令后，git把这个文件移入git工作区</p>
+</blockquote>
+<p>git commit -m “first commit”：合并提交</p>
+<blockquote>
+<p>执行这句话才会给新文件拍摄快照，方便比对和提交，否则git默认不处理</p>
+</blockquote>
+<p>git push：提交代码</p>
+<blockquote>
+<p>基本操作，如果不执行git commit -m 则什么都不会提交</p>
+</blockquote>
+<p>git pull: 更新代码，从线上更新，冲突会提示</p>
+<p>git log: 查看是谁提交了代码，主要看hash</p>
+<p>git reflog: 查看了删除了哪些内容，主要看hash</p>
+<blockquote>
+<p>核心命令：可以查看本地所有提交</p>
+</blockquote>
+<p>git reset –hard 哈希值：即可回退版本</p>
+<blockquote>
+<p>在git log里面项目日志就回退到这个版本前了，但是reflog里面记录依旧</p>
+</blockquote>
+<p>git config –global –list： 查看当前用户</p>
+<blockquote>
+<p>git config –global user.name “XXX”</p>
+<p>git config –global user.email “xxx@.com”</p>
+<p>以上可以指定用户名去提交代码</p>
+</blockquote>
+<p>git status：查看当前分支状态</p>
+<p>git remote -v：查看当前仓库</p>
+<p>git stash:   保存到缓冲区的某个区，本地修改代码，但是不想提交时可以吧修复文件置为此状态</p>
+<p>git stash apply：找回缓存区代码，代码写完了，又想提交，可以吧状态改回来</p>
+<p>git remote add 自定义名称 <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a>:webarserker/test2.git：指定提交代码的仓库地址</p>
+<blockquote>
+<p>再执行git push 自定义名称，即可推送到多个代码仓库</p>
+</blockquote>
+<p>git diff: 看哪些代码更新过，有UI版本，但是都是基于这个命令执行的</p>
+<h2 id="git-Flow-无用论：https-blog-csdn-net-millionmanhjq-article-details-106121984"><a href="#git-Flow-无用论：https-blog-csdn-net-millionmanhjq-article-details-106121984" class="headerlink" title="git Flow 无用论：https://blog.csdn.net/millionmanhjq/article/details/106121984"></a>git Flow 无用论：<a target="_blank" rel="noopener" href="https://blog.csdn.net/millionmanhjq/article/details/106121984">https://blog.csdn.net/millionmanhjq/article/details/106121984</a></h2><p>假设我们公司就我一个前端开发工程师，不是多人开发，所以我不需要flow。有几个前端，但是不是多人协同啊，还是我一个人写代码，所以还是不用这个功能</p>
+<p>经典模型问题：</p>
+<p>必须使用dev分支：假如你要改master分支，你必须先创建dev分支，然后修改提交到dev，最后master和dev合并</p>
+<p>复杂度高：hotfix与release分支</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://webarserker.github.io/2021/01/05/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7GIT/" data-id="ckjjregpt00011kufhwgbcs5c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/shirt/2020/11/11/showDoc%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">showDoc基本用法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/shirt/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/shirt/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/shirt/2021/01/05/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7GIT/">版本控制工具GIT</a>
+          </li>
+        
+          <li>
+            <a href="/shirt/2020/11/11/showDoc%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">showDoc基本用法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Shrit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Shrit</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/shirt/" class="mobile-nav-link">Home</a>
+  
+    <a href="/shirt/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/shirt/fancybox/jquery.fancybox.css">
+
+  
+<script src="/shirt/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/shirt/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
